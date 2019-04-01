@@ -19,6 +19,8 @@
 #include <arpa/inet.h>  //for htonl() and htons()
 #include <fcntl.h>
 
+#include "Log.h"
+
 #define min(a, b) ((a <= b) ? (a) : (b))
 
 using std::cout;
@@ -120,8 +122,10 @@ void *ReactorServer::main_loop(void *p) {
         }
         int m = min(n, 1024);
         for (int i = 0; i < m; ++i) {
+            // 收到新连接
             if (ev[i].data.fd == server->m_listen_fd) {
                 server->m_accept_cond.notify_one();
+                // 已有连接
             } else {
                 {
                     unique_lock<mutex> guard(server->m_work_mutex);
@@ -138,6 +142,8 @@ void *ReactorServer::main_loop(void *p) {
 void ReactorServer::accept_thread_func(ReactorServer *server) {
 
     cout << "accept thread id: " << get_id() << endl;
+    LogInfo((char*)"accept thread id: 0x%04x\n", get_id());
+
     while (true) {
         int new_fd;
         struct sockaddr_in client_addr;

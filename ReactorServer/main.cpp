@@ -8,6 +8,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+#include "Log.h"
+
 using std::cout;
 using std::endl;
 
@@ -64,6 +66,9 @@ int main(int argc, char *argv[]) {
                 break;
         }
     }
+
+    ServerLog::GetInstance().Start();
+
     if (bdaemon) daemon_run();
     if (0 == port) port = 12345;
     if (!g_server.init("0.0.0.0", port)) return -1;
