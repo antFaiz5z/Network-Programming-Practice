@@ -123,32 +123,32 @@ muduo_using/fast:
 	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/build
 .PHONY : muduo_using/fast
 
-echo_server.o: echo_server.cpp.o
+EchoServer.o: EchoServer.cpp.o
 
-.PHONY : echo_server.o
+.PHONY : EchoServer.o
 
 # target to build an object file
-echo_server.cpp.o:
-	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/echo_server.cpp.o
-.PHONY : echo_server.cpp.o
+EchoServer.cpp.o:
+	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/EchoServer.cpp.o
+.PHONY : EchoServer.cpp.o
 
-echo_server.i: echo_server.cpp.i
+EchoServer.i: EchoServer.cpp.i
 
-.PHONY : echo_server.i
+.PHONY : EchoServer.i
 
 # target to preprocess a source file
-echo_server.cpp.i:
-	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/echo_server.cpp.i
-.PHONY : echo_server.cpp.i
+EchoServer.cpp.i:
+	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/EchoServer.cpp.i
+.PHONY : EchoServer.cpp.i
 
-echo_server.s: echo_server.cpp.s
+EchoServer.s: EchoServer.cpp.s
 
-.PHONY : echo_server.s
+.PHONY : EchoServer.s
 
 # target to generate assembly for a file
-echo_server.cpp.s:
-	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/echo_server.cpp.s
-.PHONY : echo_server.cpp.s
+EchoServer.cpp.s:
+	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/EchoServer.cpp.s
+.PHONY : EchoServer.cpp.s
 
 main.o: main.cpp.o
 
@@ -177,32 +177,32 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-time_server.o: time_server.cpp.o
+TimeServer.o: TimeServer.cpp.o
 
-.PHONY : time_server.o
+.PHONY : TimeServer.o
 
 # target to build an object file
-time_server.cpp.o:
-	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/time_server.cpp.o
-.PHONY : time_server.cpp.o
+TimeServer.cpp.o:
+	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/TimeServer.cpp.o
+.PHONY : TimeServer.cpp.o
 
-time_server.i: time_server.cpp.i
+TimeServer.i: TimeServer.cpp.i
 
-.PHONY : time_server.i
+.PHONY : TimeServer.i
 
 # target to preprocess a source file
-time_server.cpp.i:
-	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/time_server.cpp.i
-.PHONY : time_server.cpp.i
+TimeServer.cpp.i:
+	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/TimeServer.cpp.i
+.PHONY : TimeServer.cpp.i
 
-time_server.s: time_server.cpp.s
+TimeServer.s: TimeServer.cpp.s
 
-.PHONY : time_server.s
+.PHONY : TimeServer.s
 
 # target to generate assembly for a file
-time_server.cpp.s:
-	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/time_server.cpp.s
-.PHONY : time_server.cpp.s
+TimeServer.cpp.s:
+	$(MAKE) -f CMakeFiles/muduo_using.dir/build.make CMakeFiles/muduo_using.dir/TimeServer.cpp.s
+.PHONY : TimeServer.cpp.s
 
 # Help Target
 help:
@@ -213,15 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... muduo_using"
-	@echo "... echo_server.o"
-	@echo "... echo_server.i"
-	@echo "... echo_server.s"
+	@echo "... EchoServer.o"
+	@echo "... EchoServer.i"
+	@echo "... EchoServer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... time_server.o"
-	@echo "... time_server.i"
-	@echo "... time_server.s"
+	@echo "... TimeServer.o"
+	@echo "... TimeServer.i"
+	@echo "... TimeServer.s"
 .PHONY : help
 
 

@@ -50,7 +50,7 @@ bool ReactorServer::init(const char *ip, short port) {
     return true;
 }
 
-bool ReactorServer::uninit() {//  未调用
+bool ReactorServer::uninit() {
 
     m_stop = true;
     m_accept_cond.notify_one();

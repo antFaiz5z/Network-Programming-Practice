@@ -1,11 +1,12 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.10)
 project(muduo_using)
 
-set(CMAKE_CXX_STANDARD 14)
-
+set(CMAKE_CXX_STANDARD 11)
 
 if(NOT MUDUO_PATH)
-    set(MUDUO_PATH "/home/$ENV{USER}/Projects/build/release-install-cpp11")
+    #set(MUDUO_PATH "/home/$ENV{USER}/Projects/build/release-install-cpp11")
+    set(MUDUO_PATH "/mnt/d/Projects/build/release-install-cpp11")
+
 endif()
 
 set(CXX_FLAGS
@@ -50,13 +51,13 @@ message(STATUS ${muduo_net})
 
 find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
-
 include_directories(${PROJECT_SOURCE_DIR})
 
-add_executable(muduo_using
-                main.cpp
-                echo_server.cpp echo_server.h
-                time_server.cpp time_server.h)
+aux_source_directory(. SRC_DIR)
+add_subdirectory(examples)
+
+add_executable(muduo_using ${SRC_DIR})
+target_link_libraries(muduo_using examples_lib)
 target_link_libraries(muduo_using ${muduo_net})
 target_link_libraries(muduo_using ${muduo_base})
 target_link_libraries(muduo_using pthread rt)
