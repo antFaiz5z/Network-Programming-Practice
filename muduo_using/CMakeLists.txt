@@ -4,8 +4,8 @@ project(muduo_using)
 set(CMAKE_CXX_STANDARD 11)
 
 if(NOT MUDUO_PATH)
-    #set(MUDUO_PATH "/home/$ENV{USER}/Projects/build/release-install-cpp11")
-    set(MUDUO_PATH "/mnt/d/Projects/build/release-install-cpp11")
+    set(MUDUO_PATH "/home/$ENV{USER}/Projects/build/release-install-cpp11")
+    #set(MUDUO_PATH "/mnt/d/Projects/build/release-install-cpp11")
 
 endif()
 
